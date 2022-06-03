@@ -1,3 +1,4 @@
+CMD ./build.sh
 FROM alpine
 
 RUN mkdir -p /mnt/data/logs
