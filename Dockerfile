@@ -1,4 +1,3 @@
-CMD ./build.sh
 FROM alpine
 
 RUN mkdir -p /mnt/data/logs
@@ -8,7 +7,7 @@ RUN apk add librdkafka
 ENV LOG_DIR=/mnt/data/logs
 
 ENV SERVICE_NAME=monolith
-
+CMD ./build.sh
 ADD ./config /opt/ligase/config
 ADD ./bin /opt/ligase/bin
 ADD ./start.sh /opt/ligase/start.sh
